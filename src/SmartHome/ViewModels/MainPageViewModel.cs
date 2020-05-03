@@ -1,4 +1,5 @@
-﻿using Prism.Navigation;
+﻿using MvvmHelpers;
+using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,15 +14,17 @@ namespace SmartHome.ViewModels
         private readonly INavigationService navigationService;
 
         public ICommand NextPageCommand { get; }
+        public ObservableRangeCollection<string> textos { get; set; }
         public MainPageViewModel(INavigationService navigationService)
         {
             NextPageCommand = new Command(NextPage);
             this.navigationService = navigationService;
+            textos = new ObservableRangeCollection<string>();
+            textos.AddRange(new string[] { "Texto 1", "Texto 2", "Texto 3"});
         }
 
         public async void NextPage()
         {
-            await DisplayAlert("Alert", "You have been alerted", "Ok");
         }
     }
 }

@@ -9,7 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.Android", "src\Sm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome.iOS", "src\SmartHome.iOS\SmartHome.iOS.csproj", "{6CCA42D5-3C94-49C1-92D0-D9471396F783}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHome", "src\SmartHome\SmartHome.csproj", "{D738A649-D36B-46FA-A0D8-C9FB34547BF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartHome", "src\SmartHome\SmartHome.csproj", "{D738A649-D36B-46FA-A0D8-C9FB34547BF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{4DF989DD-A315-47C0-AC7C-8F89F153B5CB}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
