@@ -3,7 +3,9 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="clr-namespace:SmartHome"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             BackgroundColor="#F1F1F1"
              mc:Ignorable="d">
     <NavigationPage.TitleView>
         <Label FontSize="Title"
@@ -11,12 +13,70 @@
                Text="Smart Home"
                VerticalOptions="Center" />
     </NavigationPage.TitleView>
-    <StackLayout>
+    <Grid ColumnSpacing="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="7*" />
+        </Grid.ColumnDefinitions>
+        <StackLayout Grid.Column="0"
+                     BackgroundColor="#f0f0f0">
+            <Frame Margin="10"
+                   Padding="0"
+                   BackgroundColor="White"
+                   CornerRadius="5"
+                   HasShadow="True">
+                <StackLayout>
+                    <Grid HeightRequest="80">
+                        <Image Aspect="Fill"
+                               Opacity="0.8"
+                               Source="{local:ImageResource SmartHome.Images.MainBedroom.jpg}" />
+                        <Label Margin="5,0,0,0"
+                               FontSize="Title"
+                               Text="Main Bedroom"
+                               TextColor="White"
+                               VerticalOptions="End" />
+                    </Grid>
+                    <Grid Padding="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0"
+                                     HorizontalOptions="Center">
+                            <Label FontSize="Caption"
+                                   HorizontalOptions="Center"
+                                   Text="Temperature"
+                                   TextColor="#B2B2B2" />
+                            <Label FontSize="Small"
+                                   HorizontalOptions="Center"
+                                   Text="25º C"
+                                   TextColor="Black" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="1"
+                                     HorizontalOptions="Center">
+                            <Label FontSize="Caption"
+                                   HorizontalOptions="Center"
+                                   Text="Humidity"
+                                   TextColor="#B2B2B2" />
+                            <Label FontSize="Small"
+                                   HorizontalOptions="Center"
+                                   Text="08 %"
+                                   TextColor="Black" />
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        <StackLayout Grid.Column="1"
+                     BackgroundColor="White">
+            <Label FontSize="Large"
+                   HorizontalOptions="Center"
+                   Text="Welcome to Xamarin.Forms!"
+                   TextColor="Black"
+                   VerticalOptions="CenterAndExpand" />
+        </StackLayout>
         <!--  Place new controls here  -->
-        <Label FontSize="Large"
-               HorizontalOptions="Center"
-               Text="Welcome to Xamarin.Forms!"
-               VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+
+    </Grid>
 
 </ContentPage>
