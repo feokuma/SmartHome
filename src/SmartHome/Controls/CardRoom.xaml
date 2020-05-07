@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView x:Class="SmartHome.Controls.CardRoom"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="clr-namespace:SmartHome"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             mc:Ignorable="d">
+    <ContentView.Content>
+        <StackLayout Grid.Column="0"
+                     BackgroundColor="#f0f0f0">
+            <Frame Margin="10"
+                   Padding="0"
+                   BackgroundColor="White"
+                   CornerRadius="5"
+                   HasShadow="True">
+                <StackLayout>
+                    <AbsoluteLayout HeightRequest="80">
+                        <Image AbsoluteLayout.LayoutBounds="1,1,1,1"
+                               AbsoluteLayout.LayoutFlags="All"
+                               Aspect="Fill"
+                               Opacity="0.8"
+                               Source="{local:ImageResource SmartHome.Images.MainBedroom.jpg}" />
+                        <skia:SKCanvasView x:Name="canvasView"
+                                           AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                           AbsoluteLayout.LayoutFlags="All"
+                                           Opacity="0.8"
+                                           PaintSurface="canvasView_PaintSurface" />
+                        <Label Margin="5,0,0,0"
+                               AbsoluteLayout.LayoutBounds="1,1,1,1"
+                               AbsoluteLayout.LayoutFlags="All"
+                               FontSize="Title"
+                               Text="Main Bedroom"
+                               TextColor="White"
+                               VerticalOptions="End" />
+                    </AbsoluteLayout>
+                    <Grid Padding="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="1" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0"
+                                     HorizontalOptions="Center">
+                            <Label FontSize="Caption"
+                                   HorizontalOptions="Center"
+                                   Text="Temperature"
+                                   TextColor="#B2B2B2" />
+                            <Label FontSize="Small"
+                                   HorizontalOptions="Center"
+                                   Text="25º C"
+                                   TextColor="Black" />
+                        </StackLayout>
+                        <BoxView Grid.Column="1"
+                                 BackgroundColor="#B2B2B2"
+                                 MinimumHeightRequest="1"
+                                 WidthRequest="1" />
+                        <StackLayout Grid.Column="2"
+                                     HorizontalOptions="Center">
+                            <Label FontSize="Caption"
+                                   HorizontalOptions="Center"
+                                   Text="Humidity"
+                                   TextColor="#B2B2B2" />
+                            <Label FontSize="Small"
+                                   HorizontalOptions="Center"
+                                   Text="08 %"
+                                   TextColor="Black" />
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
