@@ -25,13 +25,13 @@
                         <skia:SKCanvasView x:Name="canvasView"
                                            AbsoluteLayout.LayoutBounds="1,1,1,1"
                                            AbsoluteLayout.LayoutFlags="All"
-                                           Opacity="0.8"
+                                           Opacity="0.5"
                                            PaintSurface="canvasView_PaintSurface" />
-                        <Label Margin="5,0,0,0"
+                        <Label x:Name="title"
+                               Margin="10,0,0,0"
                                AbsoluteLayout.LayoutBounds="1,1,1,1"
                                AbsoluteLayout.LayoutFlags="All"
                                FontSize="Title"
-                               Text="Main Bedroom"
                                TextColor="White"
                                VerticalOptions="End" />
                     </AbsoluteLayout>
@@ -47,9 +47,9 @@
                                    HorizontalOptions="Center"
                                    Text="Temperature"
                                    TextColor="#B2B2B2" />
-                            <Label FontSize="Small"
+                            <Label x:Name="temperature"
+                                   FontSize="Small"
                                    HorizontalOptions="Center"
-                                   Text="25º C"
                                    TextColor="Black" />
                         </StackLayout>
                         <BoxView Grid.Column="1"
@@ -62,9 +62,9 @@
                                    HorizontalOptions="Center"
                                    Text="Humidity"
                                    TextColor="#B2B2B2" />
-                            <Label FontSize="Small"
+                            <Label x:Name="humidity"
+                                   FontSize="Small"
                                    HorizontalOptions="Center"
-                                   Text="08 %"
                                    TextColor="Black" />
                         </StackLayout>
                     </Grid>

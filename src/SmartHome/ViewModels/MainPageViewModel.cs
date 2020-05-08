@@ -13,9 +13,15 @@ namespace SmartHome.ViewModels
     {
         private readonly INavigationService navigationService;
 
+        public string Title { get; set; }
+        public string Temperature { get; set; }
+        public string Humidity { get; set; }
         public MainPageViewModel(INavigationService navigationService)
         {
             this.navigationService = navigationService;
+            Temperature = "20º C";
+            Humidity = "12%";
+            Title = "Main bedroom";
         }
     }
 }
