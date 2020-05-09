@@ -6,5 +6,26 @@
                         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                         xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
                         mc:Ignorable="d">
-    <prism:PrismApplication.Resources />
+    <prism:PrismApplication.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="FAS"
+                        x:TypeArguments="x:String">
+                <On Platform="UWP"
+                    Value="Resources/Fonts/FontAwesome.ttf#fa-solid-900" />
+            </OnPlatform>
+            <x:String x:Key="IconCoffee">&#xf0f4;</x:String>
+            <x:String x:Key="IconBed">&#xf236;</x:String>
+            <x:String x:Key="IconBath">&#xf2cd;</x:String>
+            <x:String x:Key="IconUtensils">&#xf2e7;</x:String>
+            <x:String x:Key="IconGrimBeamSweat">&#xf583;</x:String>
+            <Style x:Key="AmbientLabel"
+                   TargetType="Label">
+                <Setter Property="FontSize" Value="Title" />
+                <Setter Property="FontFamily" Value="FontAwesome" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="LightGray" />
+            </Style>
+        </ResourceDictionary>
+    </prism:PrismApplication.Resources>
 </prism:PrismApplication>

@@ -18,15 +18,26 @@
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="7*" />
         </Grid.ColumnDefinitions>
-        <controls:CardRoom Title="{Binding Title}"
-                           Humidity="{Binding Humidity}"
-                           Temperature="{Binding Temperature}" />
+        <CollectionView Grid.Column="0"
+                        BackgroundColor="#e0e0e0"
+                        ItemsSource="{Binding Ambients}"
+                        VerticalScrollBarVisibility="Never">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <controls:CardRoom Title="{Binding Title}"
+                                       Humidity="{Binding Humidity}"
+                                       Temperature="{Binding Temperature}" />
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
         <StackLayout Grid.Column="1"
                      BackgroundColor="White">
-            <Label FontSize="Large"
+            <Label FontFamily="FontAwesome"
+                   FontSize="280"
                    HorizontalOptions="Center"
-                   Text="Welcome to Xamarin.Forms!"
-                   TextColor="Black"
+                   Text="&#xf583;"
+                   TextColor="Gray"
                    VerticalOptions="CenterAndExpand" />
         </StackLayout>
         <!--  Place new controls here  -->

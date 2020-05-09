@@ -3,10 +3,9 @@ using Prism.DryIoc;
 using Prism.Ioc;
 using SmartHome.ViewModels;
 using SmartHome.Views;
-using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("FontAwesome.ttf", Alias = "FontAwesome")]
 namespace SmartHome
 {
     public partial class App : PrismApplication

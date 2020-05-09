@@ -8,68 +8,84 @@
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              mc:Ignorable="d">
     <ContentView.Content>
-        <StackLayout Grid.Column="0"
-                     BackgroundColor="#f0f0f0">
-            <Frame Margin="10"
-                   Padding="0"
-                   BackgroundColor="White"
-                   CornerRadius="5"
-                   HasShadow="True">
-                <StackLayout>
-                    <AbsoluteLayout HeightRequest="80">
-                        <Image AbsoluteLayout.LayoutBounds="1,1,1,1"
-                               AbsoluteLayout.LayoutFlags="All"
-                               Aspect="Fill"
-                               Opacity="0.8"
-                               Source="{local:ImageResource SmartHome.Images.MainBedroom.jpg}" />
-                        <skia:SKCanvasView x:Name="canvasView"
-                                           AbsoluteLayout.LayoutBounds="1,1,1,1"
-                                           AbsoluteLayout.LayoutFlags="All"
-                                           Opacity="0.5"
-                                           PaintSurface="canvasView_PaintSurface" />
-                        <Label x:Name="title"
-                               Margin="10,0,0,0"
-                               AbsoluteLayout.LayoutBounds="1,1,1,1"
-                               AbsoluteLayout.LayoutFlags="All"
-                               FontSize="Title"
-                               TextColor="White"
-                               VerticalOptions="End" />
-                    </AbsoluteLayout>
-                    <Grid Padding="5">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="1" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <StackLayout Grid.Column="0"
-                                     HorizontalOptions="Center">
-                            <Label FontSize="Caption"
-                                   HorizontalOptions="Center"
-                                   Text="Temperature"
-                                   TextColor="#B2B2B2" />
-                            <Label x:Name="temperature"
-                                   FontSize="Small"
-                                   HorizontalOptions="Center"
-                                   TextColor="Black" />
-                        </StackLayout>
-                        <BoxView Grid.Column="1"
-                                 BackgroundColor="#B2B2B2"
-                                 MinimumHeightRequest="1"
-                                 WidthRequest="1" />
-                        <StackLayout Grid.Column="2"
-                                     HorizontalOptions="Center">
-                            <Label FontSize="Caption"
-                                   HorizontalOptions="Center"
-                                   Text="Humidity"
-                                   TextColor="#B2B2B2" />
-                            <Label x:Name="humidity"
-                                   FontSize="Small"
-                                   HorizontalOptions="Center"
-                                   TextColor="Black" />
-                        </StackLayout>
-                    </Grid>
-                </StackLayout>
-            </Frame>
-        </StackLayout>
+        <Frame Padding="0"
+               BackgroundColor="White"
+               CornerRadius="5"
+               HasShadow="True">
+            <Frame.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="UWP"
+                        Value="0, 10" />
+                    <On Platform="Android"
+                        Value="10" />
+                    <On Platform="iOS"
+                        Value="10" />
+                </OnPlatform>
+            </Frame.Margin>
+            <StackLayout>
+                <AbsoluteLayout HeightRequest="100">
+                    <Image AbsoluteLayout.LayoutBounds="1,1,1,1"
+                           AbsoluteLayout.LayoutFlags="All"
+                           Aspect="Fill"
+                           Opacity="0.9"
+                           Source="{local:ImageResource SmartHome.Resources.Images.MainBedroom.jpg}" />
+                    <skia:SKCanvasView x:Name="canvasView"
+                                       AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                       AbsoluteLayout.LayoutFlags="All"
+                                       Opacity="0.5"
+                                       PaintSurface="canvasView_PaintSurface" />
+                    <Frame Padding="0"
+                           AbsoluteLayout.LayoutBounds="0.04, 0.2"
+                           AbsoluteLayout.LayoutFlags="PositionProportional"
+                           BackgroundColor="White"
+                           CornerRadius="25"
+                           HeightRequest="45"
+                           WidthRequest="45">
+                        <Label Style="{StaticResource AmbientLabel}"
+                               Text="{StaticResource IconBed}" />
+                    </Frame>
+                    <Label x:Name="title"
+                           Margin="10,0,0,0"
+                           AbsoluteLayout.LayoutBounds="1,1,1,1"
+                           AbsoluteLayout.LayoutFlags="All"
+                           FontSize="Title"
+                           TextColor="White"
+                           VerticalOptions="End" />
+                </AbsoluteLayout>
+                <Grid Padding="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="1" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="0"
+                                 HorizontalOptions="Center">
+                        <Label FontSize="Caption"
+                               HorizontalOptions="Center"
+                               Text="Temperature"
+                               TextColor="#B2B2B2" />
+                        <Label x:Name="temperature"
+                               FontSize="Small"
+                               HorizontalOptions="Center"
+                               TextColor="Black" />
+                    </StackLayout>
+                    <BoxView Grid.Column="1"
+                             BackgroundColor="#B2B2B2"
+                             MinimumHeightRequest="1"
+                             WidthRequest="1" />
+                    <StackLayout Grid.Column="2"
+                                 HorizontalOptions="Center">
+                        <Label FontSize="Caption"
+                               HorizontalOptions="Center"
+                               Text="Humidity"
+                               TextColor="#B2B2B2" />
+                        <Label x:Name="humidity"
+                               FontSize="Small"
+                               HorizontalOptions="Center"
+                               TextColor="Black" />
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </Frame>
     </ContentView.Content>
 </ContentView>

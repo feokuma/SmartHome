@@ -1,7 +1,9 @@
 ﻿using MvvmHelpers;
 using Prism.Navigation;
+using SmartHome.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Essentials;
@@ -13,15 +15,44 @@ namespace SmartHome.ViewModels
     {
         private readonly INavigationService navigationService;
 
-        public string Title { get; set; }
-        public string Temperature { get; set; }
-        public string Humidity { get; set; }
+        public ObservableCollection<Ambient> Ambients { get; set; }
+
         public MainPageViewModel(INavigationService navigationService)
         {
             this.navigationService = navigationService;
-            Temperature = "20º C";
-            Humidity = "12%";
-            Title = "Main bedroom";
+            Ambients = new ObservableCollection<Ambient>
+            {
+                new Ambient
+                {
+                    Temperature = "20º C",
+                    Humidity = "12%",
+                    Title = "Main bedroom",
+                },
+                new Ambient
+                {
+                    Temperature = "20º C",
+                    Humidity = "12%",
+                    Title = "Main bedroom",
+                },
+                new Ambient
+                {
+                    Temperature = "20º C",
+                    Humidity = "12%",
+                    Title = "Main bedroom",
+                },
+                new Ambient
+                {
+                    Temperature = "20º C",
+                    Humidity = "12%",
+                    Title = "Main bedroom",
+                },
+                new Ambient
+                {
+                    Temperature = "20º C",
+                    Humidity = "12%",
+                    Title = "Main bedroom",
+                }
+            };
         }
     }
 }
