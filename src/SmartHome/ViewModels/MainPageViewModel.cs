@@ -15,12 +15,12 @@ namespace SmartHome.ViewModels
     {
         private readonly INavigationService navigationService;
 
-        public ObservableCollection<Ambient> Ambients { get; set; }
+        public ObservableRangeCollection<Ambient> Ambients { get; set; }
 
         public MainPageViewModel(INavigationService navigationService)
         {
             this.navigationService = navigationService;
-            Ambients = new ObservableCollection<Ambient>
+            Ambients = new ObservableRangeCollection<Ambient>
             {
                 new Ambient
                 {

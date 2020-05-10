@@ -8,11 +8,6 @@
                         mc:Ignorable="d">
     <prism:PrismApplication.Resources>
         <ResourceDictionary>
-            <OnPlatform x:Key="FAS"
-                        x:TypeArguments="x:String">
-                <On Platform="UWP"
-                    Value="Resources/Fonts/FontAwesome.ttf#fa-solid-900" />
-            </OnPlatform>
             <x:String x:Key="IconCoffee">&#xf0f4;</x:String>
             <x:String x:Key="IconBed">&#xf236;</x:String>
             <x:String x:Key="IconBath">&#xf2cd;</x:String>

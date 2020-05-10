@@ -59,13 +59,14 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <StackLayout Grid.Column="0"
-                                 HorizontalOptions="Center">
+                                 HorizontalOptions="Center"
+                                 Spacing="0">
                         <Label FontSize="Caption"
                                HorizontalOptions="Center"
                                Text="Temperature"
-                               TextColor="#B2B2B2" />
+                               TextColor="Gray" />
                         <Label x:Name="temperature"
-                               FontSize="Small"
+                               FontSize="Large"
                                HorizontalOptions="Center"
                                TextColor="Black" />
                     </StackLayout>
@@ -74,13 +75,14 @@
                              MinimumHeightRequest="1"
                              WidthRequest="1" />
                     <StackLayout Grid.Column="2"
-                                 HorizontalOptions="Center">
+                                 HorizontalOptions="Center"
+                                 Spacing="0">
                         <Label FontSize="Caption"
                                HorizontalOptions="Center"
                                Text="Humidity"
-                               TextColor="#B2B2B2" />
+                               TextColor="Gray" />
                         <Label x:Name="humidity"
-                               FontSize="Small"
+                               FontSize="Large"
                                HorizontalOptions="Center"
                                TextColor="Black" />
                     </StackLayout>

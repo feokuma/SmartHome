@@ -33,12 +33,18 @@
         </CollectionView>
         <StackLayout Grid.Column="1"
                      BackgroundColor="White">
-            <Label FontFamily="FontAwesome"
-                   FontSize="280"
+            <Label FontSize="280"
                    HorizontalOptions="Center"
                    Text="&#xf583;"
                    TextColor="Gray"
-                   VerticalOptions="CenterAndExpand" />
+                   VerticalOptions="CenterAndExpand">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="UWP">Assets/fa-solid-900.ttf#Font Awesome 5 Free Solid</On>
+                        <On Platform="Android">FontAwesome</On>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
         </StackLayout>
         <!--  Place new controls here  -->
 
