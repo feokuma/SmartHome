@@ -45,6 +45,7 @@
                     </OnPlatform>
                 </Label.FontFamily>
             </Label>
+            <Image Source="bed_solid.png" />
         </StackLayout>
         <!--  Place new controls here  -->
 

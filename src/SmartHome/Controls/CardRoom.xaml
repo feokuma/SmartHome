@@ -41,8 +41,10 @@
                            CornerRadius="25"
                            HeightRequest="45"
                            WidthRequest="45">
-                        <Label Style="{StaticResource AmbientLabel}"
-                               Text="{StaticResource IconBed}" />
+                        <!--<Label Style="{StaticResource AmbientLabel}"
+                               Text="{StaticResource IconBed}" />-->
+                        <Image Aspect="Fill"
+                               Source="Assets/StoreLogo.scale-100.png" />
                     </Frame>
                     <Label x:Name="title"
                            Margin="10,0,0,0"
