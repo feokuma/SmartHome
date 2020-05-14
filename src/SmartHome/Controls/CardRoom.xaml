@@ -34,17 +34,18 @@
                                        AbsoluteLayout.LayoutFlags="All"
                                        Opacity="0.5"
                                        PaintSurface="canvasView_PaintSurface" />
-                    <Frame Padding="0"
+                    <Frame Padding="12"
                            AbsoluteLayout.LayoutBounds="0.04, 0.2"
                            AbsoluteLayout.LayoutFlags="PositionProportional"
                            BackgroundColor="White"
-                           CornerRadius="25"
-                           HeightRequest="45"
-                           WidthRequest="45">
+                           CornerRadius="40"
+                           HeightRequest="25"
+                           WidthRequest="25">
                         <!--<Label Style="{StaticResource AmbientLabel}"
                                Text="{StaticResource IconBed}" />-->
-                        <Image Aspect="Fill"
-                               Source="Assets/StoreLogo.scale-100.png" />
+                        <Image Aspect="AspectFill"
+                               Opacity="0.5"
+                               Source="{Binding AmbientIcon}" />
                     </Frame>
                     <Label x:Name="title"
                            Margin="10,0,0,0"

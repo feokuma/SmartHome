@@ -1,13 +1,7 @@
 ﻿using MvvmHelpers;
 using Prism.Navigation;
+using SmartHome.Enums;
 using SmartHome.Models;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
-using System.Windows.Input;
-using Xamarin.Essentials;
-using Xamarin.Forms;
 
 namespace SmartHome.ViewModels
 {
@@ -24,15 +18,17 @@ namespace SmartHome.ViewModels
             {
                 new Ambient
                 {
-                    Temperature = "20º C",
-                    Humidity = "12%",
+                    Temperature = "25º C",
+                    Humidity = "18%",
                     Title = "Main bedroom",
+                    AmbientIcon = Ambient.AmbientIconsDictionary[AmbientIconsEnum.MainBedroom]
                 },
                 new Ambient
                 {
-                    Temperature = "20º C",
-                    Humidity = "12%",
-                    Title = "Main bedroom",
+                    Temperature = "21º C",
+                    Humidity = "20%",
+                    Title = "Bathroom",
+                    AmbientIcon = Ambient.AmbientIconsDictionary[AmbientIconsEnum.BathRoom]
                 },
                 new Ambient
                 {
