@@ -1,6 +1,5 @@
 ﻿using MvvmHelpers;
 using Prism.Navigation;
-using SmartHome.Enums;
 using SmartHome.Models;
 
 namespace SmartHome.ViewModels
@@ -21,32 +20,35 @@ namespace SmartHome.ViewModels
                     Temperature = "25º C",
                     Humidity = "18%",
                     Title = "Main bedroom",
-                    AmbientIcon = Ambient.AmbientIconsDictionary[AmbientIconsEnum.MainBedroom]
+                    AmbientIcon = Ambient.AmbientIconsDictionary[AmbientEnum.MainBedroom],
+                    AmbientImage = Ambient.AmbientImageDictionary[AmbientEnum.MainBedroom]
                 },
                 new Ambient
                 {
                     Temperature = "21º C",
                     Humidity = "20%",
                     Title = "Bathroom",
-                    AmbientIcon = Ambient.AmbientIconsDictionary[AmbientIconsEnum.BathRoom]
+                    AmbientIcon = Ambient.AmbientIconsDictionary[AmbientEnum.BathRoom],
+                    AmbientImage = Ambient.AmbientImageDictionary[AmbientEnum.BathRoom]
                 },
                 new Ambient
                 {
                     Temperature = "20º C",
                     Humidity = "12%",
-                    Title = "Main bedroom",
+                    Title = "Living room",
+                    
                 },
                 new Ambient
                 {
                     Temperature = "20º C",
                     Humidity = "12%",
-                    Title = "Main bedroom",
+                    Title = "Kitchen",
                 },
                 new Ambient
                 {
                     Temperature = "20º C",
                     Humidity = "12%",
-                    Title = "Main bedroom",
+                    Title = "Garage",
                 }
             };
         }

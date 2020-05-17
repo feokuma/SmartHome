@@ -33,7 +33,7 @@
         </CollectionView>
         <StackLayout Grid.Column="1"
                      BackgroundColor="White">
-            <Label FontSize="280"
+            <!--<Label FontSize="280"
                    HorizontalOptions="Center"
                    Text="&#xf583;"
                    TextColor="Gray"
@@ -44,7 +44,7 @@
                         <On Platform="Android">FontAwesome</On>
                     </OnPlatform>
                 </Label.FontFamily>
-            </Label>
+            </Label>-->
             <Image Source="bed_solid.png" />
         </StackLayout>
         <!--  Place new controls here  -->

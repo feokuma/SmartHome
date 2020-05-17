@@ -1,5 +1,7 @@
-﻿using SmartHome.Enums;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Net.NetworkInformation;
+using SmartHome;
+using Xamarin.Forms;
 
 namespace SmartHome.Models
 {
@@ -9,11 +11,24 @@ namespace SmartHome.Models
         public string Temperature { get; set; }
         public string Humidity { get; set; }
         public string AmbientIcon { get; set; }
+        public string AmbientImage { get; set; }
 
-        public static Dictionary<AmbientIconsEnum, string> AmbientIconsDictionary = new Dictionary<AmbientIconsEnum, string>
+        public static Dictionary<AmbientEnum, string> AmbientIconsDictionary = new Dictionary<AmbientEnum, string>
         {
-            {AmbientIconsEnum.MainBedroom, "bed_solid.png" },
-            {AmbientIconsEnum.BathRoom, "bath.png" }
+            {AmbientEnum.MainBedroom, "bed_solid.png" },
+            {AmbientEnum.BathRoom, "bath_solid.png" }
         };
+
+        public static Dictionary<AmbientEnum, string> AmbientImageDictionary = new Dictionary<AmbientEnum, string>
+        {
+            {AmbientEnum.MainBedroom, "MainBedroom" },
+            {AmbientEnum.BathRoom, "Bathroom" }
+        };
+    }
+
+    public enum AmbientEnum
+    {
+        MainBedroom,
+        BathRoom
     }
 }
