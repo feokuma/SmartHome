@@ -2,11 +2,16 @@
 <ContentView x:Class="SmartHome.Controls.CardRoom"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:SmartHome.Converters"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:local="clr-namespace:SmartHome"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              mc:Ignorable="d">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:ImageSourceConverter x:Key="imageSourceConverter" />
+        </ResourceDictionary>
+    </ContentView.Resources>
     <ContentView.Content>
         <Frame Padding="0"
                BackgroundColor="White"
@@ -29,7 +34,7 @@
                            AbsoluteLayout.LayoutFlags="All"
                            Aspect="Fill"
                            Opacity="0.9"
-                           Source="{local:ImageResource Source={Binding AmbientImage}}" />
+                           Source="{Binding AmbientImage, Converter={StaticResource imageSourceConverter}}" />
                     <skia:SKCanvasView x:Name="canvasView"
                                        AbsoluteLayout.LayoutBounds="1,1,1,1"
                                        AbsoluteLayout.LayoutFlags="All"

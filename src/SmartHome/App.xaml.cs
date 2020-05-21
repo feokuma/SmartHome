@@ -10,7 +10,7 @@ namespace SmartHome
 {
     public partial class App : PrismApplication
     {
-        public App() : base(null) { }
+        public App() : this(null) { }
 
         public App(IPlatformInitializer initializer) : base(initializer, true) { }
 

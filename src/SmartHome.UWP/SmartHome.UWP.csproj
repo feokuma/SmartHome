@@ -134,6 +134,7 @@
     <Content Include="Resources\Images\bath_solid.png" />
     <Content Include="Resources\Images\bed_solid.png" />
     <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Resources\Images\StoreLogo.scale-400.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

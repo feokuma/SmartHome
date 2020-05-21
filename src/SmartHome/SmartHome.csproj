@@ -11,15 +11,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="fa-solid-900.ttf" />
+    <None Remove="Resources\Images\Bathroom.jpg" />
+    <None Remove="Resources\Images\Garage.jpg" />
+    <None Remove="Resources\Images\Kitchen.jpg" />
+    <None Remove="Resources\Images\LivingRoom.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="fa-solid-900.ttf" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Images\MainBedroom.jpg" />
+    <EmbeddedResource Include="Resources\Images\Bathroom.jpg" />
+    <EmbeddedResource Include="Resources\Images\Garage.jpg" />
+    <EmbeddedResource Include="Resources\Images\Kitchen.jpg" />
+    <EmbeddedResource Include="Resources\Images\LivingRoom.jpg" />
+    <EmbeddedResource Include="Resources\Images\MainBedroom.jpg">
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Fonts\fa-solid-900.ttf" />
   </ItemGroup>
 

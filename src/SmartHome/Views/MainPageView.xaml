@@ -32,7 +32,7 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
         <StackLayout Grid.Column="1"
-                     BackgroundColor="White">
+                     BackgroundColor="Gray">
             <!--<Label FontSize="280"
                    HorizontalOptions="Center"
                    Text="&#xf583;"
@@ -45,7 +45,9 @@
                     </OnPlatform>
                 </Label.FontFamily>
             </Label>-->
-            <Image Source="bed_solid.png" />
+            <Image HorizontalOptions="FillAndExpand"
+                   Source="StoreLogo.scale-400.png"
+                   VerticalOptions="FillAndExpand" />
         </StackLayout>
         <!--  Place new controls here  -->
 
