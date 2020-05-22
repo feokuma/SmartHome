@@ -17,6 +17,9 @@ namespace SmartHome.Models
         {
             {AmbientEnum.MainBedroom, "bed_solid.png" },
             {AmbientEnum.BathRoom, "bath_solid.png" },
+            {AmbientEnum.LivingRoom, "livingRoom_solid.png" },
+            {AmbientEnum.Kitchen, "kitchen_solid.png" },
+            {AmbientEnum.Garage, "garage_solid.png" }
         };
 
         public static Dictionary<AmbientEnum, string> AmbientImageDictionary = new Dictionary<AmbientEnum, string>

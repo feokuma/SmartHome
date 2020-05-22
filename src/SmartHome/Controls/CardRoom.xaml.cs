@@ -63,9 +63,11 @@ namespace SmartHome.Controls
 
         private void canvasView_PaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
-            SKImageInfo info = args.Info;
-            SKSurface surface = args.Surface;
-            SKCanvas canvas = surface.Canvas;
+            var imageInfo = args.Info;
+            var surface = args.Surface;
+            var canvas = surface.Canvas;
+            var initialColor = new SKColor(0x7a, 0x53, 0xcb);
+            var finalColor = new SKColor(0xf5, 0x42, 0x8d);
 
             canvas.Clear();
 
@@ -74,14 +76,13 @@ namespace SmartHome.Controls
                 // Create gradient for background
                 paint.Shader = SKShader.CreateLinearGradient(
                                     new SKPoint(0, 0),
-                                    new SKPoint(info.Width, info.Height),
-                                    new SKColor[] { new SKColor(0x7a, 0x53, 0xcb),
-                                                new SKColor(0xf5, 0x42, 0x8d) },
+                                    new SKPoint(imageInfo.Width, imageInfo.Height),
+                                    new SKColor[] { initialColor, finalColor },
                                     null,
                                     SKShaderTileMode.Clamp);
 
                 // Draw background
-                canvas.DrawRect(info.Rect, paint);
+                canvas.DrawRect(imageInfo.Rect, paint);
             }
         }
     }

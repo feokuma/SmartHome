@@ -36,21 +36,24 @@ namespace SmartHome.ViewModels
                     Temperature = "20º C",
                     Humidity = "12%",
                     Title = "Living room",
-                    AmbientImage = Ambient.AmbientImageDictionary[AmbientEnum.LivingRoom]
+                    AmbientImage = Ambient.AmbientImageDictionary[AmbientEnum.LivingRoom],
+                    AmbientIcon = Ambient.AmbientIconsDictionary[AmbientEnum.LivingRoom]
                 },
                 new Ambient
                 {
                     Temperature = "20º C",
                     Humidity = "12%",
                     Title = "Kitchen",
-                    AmbientImage = Ambient.AmbientImageDictionary[AmbientEnum.Kitchen]
+                    AmbientImage = Ambient.AmbientImageDictionary[AmbientEnum.Kitchen],
+                    AmbientIcon = Ambient.AmbientIconsDictionary[AmbientEnum.Kitchen]
                 },
                 new Ambient
                 {
                     Temperature = "20º C",
                     Humidity = "12%",
                     Title = "Garage",
-                    AmbientImage = Ambient.AmbientImageDictionary[AmbientEnum.Garage]
+                    AmbientImage = Ambient.AmbientImageDictionary[AmbientEnum.Garage],
+                    AmbientIcon = Ambient.AmbientIconsDictionary[AmbientEnum.Garage]
                 }
             };
         }

@@ -1,0 +1,27 @@
+{
+  "images": [
+    {
+      "appearances": [],
+      "scale": "1x",
+      "idiom": "universal",
+      "filename": "bath_solid.png"
+    },
+    {
+      "appearances": [],
+      "scale": "2x",
+      "idiom": "universal",
+      "filename": "bath_solid1.png"
+    },
+    {
+      "appearances": [],
+      "scale": "3x",
+      "idiom": "universal",
+      "filename": "bath_solid2.png"
+    }
+  ],
+  "properties": {},
+  "info": {
+    "version": 1,
+    "author": ""
+  }
+}
