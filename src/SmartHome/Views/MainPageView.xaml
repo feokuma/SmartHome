@@ -24,6 +24,16 @@
                         BackgroundColor="#e0e0e0"
                         ItemsSource="{Binding Ambients}"
                         VerticalScrollBarVisibility="Never">
+            <CollectionView.Header>
+                <StackLayout Padding="0">
+                    <Frame Margin="10"
+                           Padding="0"
+                           BackgroundColor="White"
+                           CornerRadius="5">
+                        <SearchBar Placeholder="Search room" />
+                    </Frame>
+                </StackLayout>
+            </CollectionView.Header>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <controls:CardRoom Title="{Binding Title}"
