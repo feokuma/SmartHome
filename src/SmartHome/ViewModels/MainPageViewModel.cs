@@ -1,18 +1,21 @@
 ﻿using MvvmHelpers;
 using Prism.Navigation;
 using SmartHome.Models;
+using System;
 
 namespace SmartHome.ViewModels
 {
     public class MainPageViewModel
     {
         private readonly INavigationService navigationService;
+        public DateTime Date { get; private set; }
 
         public ObservableRangeCollection<Ambient> Ambients { get; set; }
 
         public MainPageViewModel(INavigationService navigationService)
         {
             this.navigationService = navigationService;
+            Date = DateTime.Now; 
             Ambients = new ObservableRangeCollection<Ambient>
             {
                 new Ambient

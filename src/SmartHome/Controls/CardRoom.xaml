@@ -73,11 +73,11 @@
                         <Label FontSize="Caption"
                                HorizontalOptions="Center"
                                Text="Temperature"
-                               TextColor="Gray" />
+                               TextColor="{StaticResource TextTitleColor}" />
                         <Label x:Name="temperature"
                                FontSize="Large"
                                HorizontalOptions="Center"
-                               TextColor="Black" />
+                               TextColor="{StaticResource TextValueColor}" />
                     </StackLayout>
                     <BoxView Grid.Column="1"
                              BackgroundColor="#B2B2B2"
@@ -89,11 +89,11 @@
                         <Label FontSize="Caption"
                                HorizontalOptions="Center"
                                Text="Humidity"
-                               TextColor="Gray" />
+                               TextColor="{StaticResource TextTitleColor}" />
                         <Label x:Name="humidity"
                                FontSize="Large"
                                HorizontalOptions="Center"
-                               TextColor="Black" />
+                               TextColor="{StaticResource TextValueColor}" />
                     </StackLayout>
                 </Grid>
             </StackLayout>

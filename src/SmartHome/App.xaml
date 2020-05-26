@@ -8,6 +8,8 @@
                         mc:Ignorable="d">
     <prism:PrismApplication.Resources>
         <ResourceDictionary>
+            <Color x:Key="TextTitleColor">Gray</Color>
+            <Color x:Key="TextValueColor">Black</Color>
             <x:String x:Key="IconCoffee">&#xf0f4;</x:String>
             <x:String x:Key="IconBed">&#xf236;</x:String>
             <x:String x:Key="IconBath">&#xf2cd;</x:String>
@@ -19,7 +21,7 @@
                 <Setter Property="FontFamily" Value="FontAwesome" />
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="VerticalOptions" Value="Center" />
-                <Setter Property="TextColor" Value="LightGray" />
+                <Setter Property="TextColor" Value="{StaticResource TextTitleColor}" />
             </Style>
         </ResourceDictionary>
     </prism:PrismApplication.Resources>

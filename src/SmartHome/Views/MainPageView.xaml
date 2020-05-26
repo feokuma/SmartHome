@@ -8,9 +8,11 @@
              BackgroundColor="#F1F1F1"
              mc:Ignorable="d">
     <NavigationPage.TitleView>
-        <Label FontSize="Title"
+        <Label FontAttributes="Bold"
+               FontSize="Title"
                HorizontalOptions="Center"
                Text="Smart Home"
+               TextColor="White"
                VerticalOptions="Center" />
     </NavigationPage.TitleView>
     <Grid ColumnSpacing="1">
@@ -32,25 +34,18 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
         <StackLayout Grid.Column="1"
-                     BackgroundColor="Gray">
-            <!--<Label FontSize="280"
-                   HorizontalOptions="Center"
-                   Text="&#xf583;"
-                   TextColor="Gray"
-                   VerticalOptions="CenterAndExpand">
-                <Label.FontFamily>
-                    <OnPlatform x:TypeArguments="x:String">
-                        <On Platform="UWP">Assets/fa-solid-900.ttf#Font Awesome 5 Free Solid</On>
-                        <On Platform="Android">FontAwesome</On>
-                    </OnPlatform>
-                </Label.FontFamily>
-            </Label>-->
-            <Image HorizontalOptions="FillAndExpand"
-                   Source="StoreLogo.scale-400.png"
-                   VerticalOptions="FillAndExpand" />
+                     BackgroundColor="White">
+            <Grid Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="1"
+                       HorizontalOptions="End"
+                       Text="{Binding Date, StringFormat='{0:MMMM dd, yyyy}'}"
+                       TextColor="{StaticResource TextTitleColor}" />
+            </Grid>
         </StackLayout>
-        <!--  Place new controls here  -->
-
     </Grid>
 
 </ContentPage>
