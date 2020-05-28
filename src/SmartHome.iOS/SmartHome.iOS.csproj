@@ -94,6 +94,15 @@
     <ImageAsset Include="Assets.xcassets\bath_solid.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\cloudy_day.imageset\image-40@1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\cloudy_day.imageset\image-40@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\cloudy_day.imageset\image-40@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\garage_solid.imageset\image-40@1x.png">
       <Visible>false</Visible>
     </ImageAsset>
@@ -101,6 +110,9 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\garage_solid.imageset\image-40@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\cloudy_day.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\kitchen_solid.imageset\image-40@1x.png">

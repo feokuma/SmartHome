@@ -134,6 +134,7 @@
     <Content Include="Resources\Images\bath_solid.png" />
     <Content Include="Resources\Images\bed_solid.png" />
     <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Resources\Images\cloudy_day.png" />
     <Content Include="Resources\Images\garage_solid.png" />
     <Content Include="Resources\Images\kitchen_solid.png" />
     <Content Include="Resources\Images\livingRoom_solid.png" />
