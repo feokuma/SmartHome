@@ -5,6 +5,7 @@
              xmlns:controls="clr-namespace:SmartHome.Controls"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              BackgroundColor="#F1F1F1"
              mc:Ignorable="d">
     <NavigationPage.TitleView>
@@ -55,6 +56,15 @@
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
+                <Frame Grid.Row="0"
+                       Padding="0"
+                       CornerRadius="40"
+                       HeightRequest="50"
+                       HorizontalOptions="Start"
+                       WidthRequest="50">
+                    <skia:SKCanvasView x:Name="skiaCanvas"
+                                       PaintSurface="skiaCanvas_PaintSurface" />
+                </Frame>
                 <Label Grid.Row="0"
                        HorizontalOptions="End"
                        Text="{Binding Date, StringFormat='{0:MMMM dd, yyyy}'}"
