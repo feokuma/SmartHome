@@ -55,8 +55,10 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
                 <Frame Grid.Row="0"
+                       Grid.RowSpan="2"
                        Padding="0"
                        CornerRadius="40"
                        HeightRequest="50"
@@ -72,13 +74,19 @@
                                Source="bed_solid.png" />
                     </AbsoluteLayout>
                 </Frame>
+                <Label Grid.Row="2"
+                       FontSize="Title"
+                       Text="Main bedroom"
+                       TextColor="Black" />
                 <Label Grid.Row="0"
                        HorizontalOptions="End"
                        Text="{Binding Date, StringFormat='{0:MMMM dd, yyyy}'}"
                        TextColor="{StaticResource TextTitleColor}" />
                 <StackLayout Grid.Row="1"
+                             Grid.RowSpan="2"
                              HorizontalOptions="End"
-                             Orientation="Horizontal">
+                             Orientation="Horizontal"
+                             VerticalOptions="EndAndExpand">
                     <Label FontSize="35"
                            HorizontalOptions="End"
                            Text="25º"
