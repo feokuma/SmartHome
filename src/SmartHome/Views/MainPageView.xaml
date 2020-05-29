@@ -62,8 +62,15 @@
                        HeightRequest="50"
                        HorizontalOptions="Start"
                        WidthRequest="50">
-                    <skia:SKCanvasView x:Name="skiaCanvas"
-                                       PaintSurface="skiaCanvas_PaintSurface" />
+                    <AbsoluteLayout>
+                        <skia:SKCanvasView x:Name="skiaCanvas"
+                                           AbsoluteLayout.LayoutBounds="1,1,1,1"
+                                           AbsoluteLayout.LayoutFlags="All"
+                                           PaintSurface="skiaCanvas_PaintSurface" />
+                        <Image AbsoluteLayout.LayoutBounds=".5,.35,.65,.65"
+                               AbsoluteLayout.LayoutFlags="All"
+                               Source="bed_solid.png" />
+                    </AbsoluteLayout>
                 </Frame>
                 <Label Grid.Row="0"
                        HorizontalOptions="End"
