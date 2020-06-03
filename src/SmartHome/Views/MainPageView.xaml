@@ -92,7 +92,7 @@
                            Text="25º"
                            TextColor="Black"
                            VerticalOptions="Center" />
-                    <BoxView Margin="10,0"
+                    <BoxView Margin="0"
                              BackgroundColor="Black"
                              HeightRequest="30"
                              VerticalOptions="Center"
@@ -103,6 +103,54 @@
                            RotationY="180"
                            Source="cloudy_day.png" />
                 </StackLayout>
+            </Grid>
+            <BoxView Margin="10,0"
+                     BackgroundColor="LightGray"
+                     HeightRequest="1"
+                     VerticalOptions="Start" />
+            <Grid x:Name="AmbienceInfo"
+                  Margin="10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Text="Preset"
+                       TextColor="{StaticResource TextTitleColor}" />
+                <Label Grid.Row="0"
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                       Text="Temperature"
+                       TextColor="{StaticResource TextTitleColor}" />
+                <Label Grid.Row="0"
+                       Grid.Column="3"
+                       HorizontalOptions="Center"
+                       Text="Humidity"
+                       TextColor="{StaticResource TextTitleColor}" />
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Text="Custom preset 01"
+                       TextColor="Black"
+                       VerticalOptions="Center" />
+                <Label Grid.Row="1"
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                       Style="{StaticResource TempHumiStyle}"
+                       Text="25º"
+                       VerticalOptions="Start" />
+                <Label Grid.Row="1"
+                       Grid.Column="3"
+                       HorizontalOptions="Center"
+                       Style="{StaticResource TempHumiStyle}"
+                       Text="08%"
+                       VerticalOptions="Start" />
             </Grid>
             <BoxView Margin="10,0"
                      BackgroundColor="LightGray"
